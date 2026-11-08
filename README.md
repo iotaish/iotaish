@@ -1,5 +1,14 @@
 # ishp@ctrin
 
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Solidity-363636?style=flat-square&logo=solidity&logoColor=white" alt="Solidity" />
+  <img src="https://img.shields.io/badge/Deno-000000?style=flat-square&logo=deno&logoColor=white" alt="Deno" />
+  <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare Workers" />
+  <img src="https://img.shields.io/badge/uv-DE5FE9?style=flat-square&logo=astral&logoColor=white" alt="uv" />
+</p>
+
 情報工学科（CS）専攻。
 数理モデルの厳密な閉形式実装、宣言的ルールによる開発者向け CLI ツール、および多段階の型変換を排したソフトウェア設計（スペードアーキテクチャ）を軸に開発を行っています。
 
@@ -9,7 +18,8 @@
    - [1.1. プロトコル・数理モデル][プロトコル・数理モデル]
    - [1.2. 開発者ツール・ワークフロー自動化][開発者ツール・ワークフロー自動化]
    - [1.3. コミュニティ・基盤運用][コミュニティ・基盤運用]
-- [2. 設計原則と技術スタック][設計原則と技術スタック]
+- [2. 技術スタック・言語ポートフォリオ][技術スタック・言語ポートフォリオ]
+- [3. 設計原則][設計原則]
 
 ## 1. 主要プロジェクト
 
@@ -32,21 +42,29 @@
 1. **[`cit-cs-hub`][org-cit-cs-hub]** — 千葉工業大学 情報工学科コミュニティ Organization
    - 講義知見の体系的アーカイブ、Fork & PR による課題コードの相互ピアレビュー、および GitHub Rulesets と Verified 署名を組み合わせた実践的な開発ガバナンス基盤を設計・運用しています。
 
-## 2. 設計原則と技術スタック
+## 2. 技術スタック・言語ポートフォリオ
 
-1. **アーキテクチャと仕様記述**
-   - **スペードアーキテクチャ (Spade Architecture)**: 入力事実の最小定義（Tip / 切っ先）、関係・グラフによる正規空間（Wings / 翼）、SQL・CSS 等による宣言的集約（Handle / 柄）、および出力射影（Base / 裾）の4層で責務を分離し、中間の冗長なデータ構造変換を排除します。
-   - **3本柱の仕様書体系**: 課題の再帰的分解ツリー（`breakdown/`）、実装・思考・ドメインの衛生規律（`hygiene/`）、および運用手順（`procedures/`）によって「Why & Intent」を単一情報源（SSOT）として管理します。
-1. **主要技術スタック**
-   - **Languages**: Python, TypeScript / JavaScript, Solidity, C, Shell, LaTeX
-   - **Runtime & Tooling**: uv, Ruff, Pyright, pytest, Deno, Cloudflare Workers, Git / GitHub CLI
-   - **Data & Libraries**: Polars, DuckDB, Pydantic, FastAPI, Typer, discord.py
+| 領域 | 技術スタック・ツール | 主な適用領域・プロジェクト |
+|---|---|---|
+| **Systems & Logic** | Python, C, Shell | CLI ツール開発（`zipdir`）、自動化スクリプト、データ解析 |
+| **Smart Contract** | Solidity, Ethereum (EVM) | プロトコル設計、検証可能な自律経済モデル（`dynaflux`） |
+| **Web & Edge** | TypeScript, Vanilla JS, Deno, Cloudflare Workers | サーバーレスエッジ実行、Web 標準準拠クライアント |
+| **Dev Environment** | uv, Ruff, Pyright, pytest, GitHub Rulesets, SSH Commit Signing | 厳格な静的解析、パッケージング、Git/GitHub ガバナンス |
+| **Documentation** | LaTeX, Markdown (markdownlint 準拠) | 学術レポート、3本柱仕様書体系（`breakdown/` 構造化） |
+
+## 3. 設計原則
+
+1. **スペードアーキテクチャ (Spade Architecture)**
+   - 入力事実の最小定義（Tip / 切っ先）、関係・グラフによる正規空間（Wings / 翼）、SQL・CSS 等による宣言的集約（Handle / 柄）、および出力射影（Base / 裾）の4層で責務を分離し、中間の冗長なデータ構造変換を排除します。
+1. **3本柱の仕様書体系 (3-Pillar Specifications)**
+   - 課題の再帰的分解ツリー（`breakdown/`）、実装・思考・ドメインの衛生規律（`hygiene/`）、および運用手順（`procedures/`）によって「Why & Intent」を単一情報源（SSOT）として管理します。
 
 [主要プロジェクト]: #1-主要プロジェクト
 [プロトコル・数理モデル]: #11-プロトコル数理モデル
 [開発者ツール・ワークフロー自動化]: #12-開発者ツールワークフロー自動化
 [コミュニティ・基盤運用]: #13-コミュニティ基盤運用
-[設計原則と技術スタック]: #2-設計原則と技術スタック
+[技術スタック・言語ポートフォリオ]: #2-技術スタック言語ポートフォリオ
+[設計原則]: #3-設計原則
 [repo-dynaflux]: https://github.com/iotaish/dynaflux
 [repo-zipdir]: https://github.com/iotaish/zipdir
 [repo-karabiner]: https://github.com/iotaish/karabiner-json-generator
