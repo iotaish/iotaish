@@ -6,21 +6,18 @@
 ## 目次 <!-- omit in toc -->
 
 - [1. 主要プロジェクト][主要プロジェクト]
-   - [1.1. プロトコル・数理シミュレーション][プロトコル・数理シミュレーション]
+   - [1.1. プロトコル・数理モデル][プロトコル・数理モデル]
    - [1.2. 開発者ツール・ワークフロー自動化][開発者ツール・ワークフロー自動化]
    - [1.3. コミュニティ・基盤運用][コミュニティ・基盤運用]
 - [2. 設計原則と技術スタック][設計原則と技術スタック]
 
 ## 1. 主要プロジェクト
 
-### 1.1. プロトコル・数理シミュレーション
+### 1.1. プロトコル・数理モデル
 
 1. **[`dynaflux`][repo-dynaflux]** — Autonomous Verifiable Thermostatic Currency
    - 2つの時間スケールの指数減衰状態（`late` / `early`）により通貨発行量と移転税率を自律制御する $O(1)$ サーモスタット暗号資産プロトコルです。
    - 区間縮小つきパデ型有理関数近似による減衰計算、微分方程式の厳密積分による**完全な分割不変性（Path-Independent Split-Invariance）**、および `stateHash` 監査チェーンを備え、Ethereum Sepolia と Cloudflare Workers（Discord Bot）を直結してサーバーレスで稼働します。
-1. **[`discord-casino-bot`][repo-casino]** — ペリカ経済圏・ミニゲーム & 金融シミュレータ Bot
-   - サーバー別独立通貨「ペリカ」を基軸とした Discord 向け経済・ゲーム基盤です。
-   - チンチロ・パチンコ・ブラックジャック等の遊技に加え、全サーバー共通価格で推移するトークンの現物・空売り取引、元本保証債とデフォルト確率を持つジャンク債、および日割り利息つきの P2P 貸付市場を実装しています。
 
 ### 1.2. 開発者ツール・ワークフロー自動化
 
@@ -46,12 +43,11 @@
    - **Data & Libraries**: Polars, DuckDB, Pydantic, FastAPI, Typer, discord.py
 
 [主要プロジェクト]: #1-主要プロジェクト
-[プロトコル・数理シミュレーション]: #11-プロトコル数理シミュレーション
+[プロトコル・数理モデル]: #11-プロトコル数理モデル
 [開発者ツール・ワークフロー自動化]: #12-開発者ツールワークフロー自動化
 [コミュニティ・基盤運用]: #13-コミュニティ基盤運用
 [設計原則と技術スタック]: #2-設計原則と技術スタック
 [repo-dynaflux]: https://github.com/iotaish/dynaflux
-[repo-casino]: https://github.com/iotaish/discord-casino-bot
 [repo-zipdir]: https://github.com/iotaish/zipdir
 [repo-karabiner]: https://github.com/iotaish/karabiner-json-generator
 [org-cit-cs-hub]: https://github.com/cit-cs-hub
